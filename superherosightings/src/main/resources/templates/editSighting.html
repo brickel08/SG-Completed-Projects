@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- CSS stylesheet -->
+        <link th:href="@{/styles.css}" rel="stylesheet" type="text/css"/>
+
+        <title>Ben's Super Sightings</title>
+    </head>
+    <body>
+        <!-- Main Body of Page -->
+
+        <!-- header Jumbotron -->
+        <div class="container">
+            <a href="#" th:href="@{/}">
+                <div class="p-5 text-center bg-light border border-light pageHeader">
+                    <h1>Super Sightings!</h1>
+                </div></a>
+            <!-- end header Jumbotron -->
+
+
+            <!-- nav bar -->
+            <div class="row m-4 border border-light nav sticky-top"> 
+                <div class="col text-center m-3">
+                    <a href="supers" class="nav-btn-primary btn-lg">Supers</a>
+                </div>
+                <div class="col text-center m-3">
+                    <a href="powers" class="nav-btn-primary btn-lg">Powers</a>
+                </div>
+                <div class="col text-center m-3">
+                    <a href="sightings" class="nav-btn-primary btn-lg">Sightings</a>
+                </div>
+                <div class="col text-center m-3">
+                    <a href="organizations" class="nav-btn-primary btn-lg">Organizations</a>
+                </div>
+                <div class="col text-center m-3">
+                    <a href="locations" class="nav-btn-primary btn-lg">Locations</a>
+                </div>
+
+            </div>
+            <!-- end nav bar -->
+
+            <div class="col-12 m-1 text-center" th:if="${!errors.isEmpty()}">
+                <p class="alert alert-danger" th:each="error : ${errors}" th:text="${error.message}">Error Message</p>
+            </div>
+
+            <!-- begin EDIT SIGHTING FORM -->
+
+            <div class="row m-4 border border-light editForm">
+                <div class="col-3 text-center m-3">
+                    <span class="h3">Edit Super Being Sighting!</span>
+                    <hr>
+                    <p>Fill out this form to Edit a Super Being Sighting and update the database!</p>
+                </div>
+                <div class="col-7 text-center m-3">
+                    <form action="editSighting" method="POST">
+                        <div class="form-group row">
+                            <label for="supers" class="col-3 col-form-label text-right">* Super Beings</label>
+                            <div class="col-9">
+                                <select id="supers" name="superId" class="form-control">
+                                    <option
+                                        th:each="super : ${supers}"
+                                        th:value="${super.id}"
+                                        th:text="${super.name}">Super Being</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="location" class="col-3 col-form-label text-right">* Location</label>
+                            <div class="col-9">
+                                <select id="location" name="locationId" class="form-control">
+                                    <option th:each="location : ${locations}"
+                                            th:value="${location.id}"
+                                            th:text="${location.name}">
+                                        Location
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="sightingDate" class="col-3 col-form-label text-right">* Date</label>
+                            <div class="col-9">
+                                <input type="date" name="sightingDate" id="sightingDate" class="form-control" required
+                                       oninvalid="this.setCustomValidity('Please select a date for the Sighting.')"
+                                       oninput="this.setCustomValidity('')"/>
+                            </div>
+                        </div>
+                        <input type="hidden" name="id" th:value="${sighting.id}"/>
+                        <button type="button" class="btn nav-btn-primary"><a href="#" th:href="@{/sightings}">Cancel</a></button>
+                        <button type="submit" class="btn nav-btn-primary">Update Sighting</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- end EDIT SIGHTING FORM -->
+
+
+
+
+            <!-- end of container -->
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- End main body -->
+
+
+        <!-- notes 
+        
+        
+                background-image: url('file:///Users/benrickel/Desktop/Software%20Guild/Badge%204%20Files/superherosightings/images/1689762.jpg');
+        
+        
+        
+        
+        
+        -->
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+

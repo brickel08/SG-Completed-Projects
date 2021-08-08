@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+4,Graham Yabroff,CO,2.90,Wood,420,5.15,4.75,2163.00,1995.00,120.58,4278.58

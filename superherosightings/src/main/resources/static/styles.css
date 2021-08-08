@@ -1,0 +1,151 @@
+.pageHeader {
+	background-color: #ef476f;
+	background-image: linear-gradient(to bottom, #40E0D0, #06d6a0);
+	padding: 10px;
+	margin-top: 10px;
+	color: black;
+        box-shadow: 5px 5px 5px black;
+}
+
+.nav {
+	background-image: linear-gradient(to top, #40E0D0, #06d6a0);
+	border-width: 10px;
+	position: sticky;
+        box-shadow: 5px 5px 5px black;
+}
+
+body {
+	background-image: linear-gradient(to right, #118ab2, #073b4c);
+}
+
+.nav-btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	background-color: #118ab2 !important;
+	background-image: linear-gradient(to right, #663399 , #9370DB);
+	color:  white;
+
+}
+
+.cancelButton, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	background-color: #118ab2 !important;
+	background-image: linear-gradient(to right, #663399 , #9370DB);
+	color:  white;
+
+}
+
+
+.addForm {
+	background-image: linear-gradient(to left, #ffd166, #ef476f);
+        box-shadow: 5px 5px 5px black;
+}
+
+.editForm {
+	background-image: linear-gradient(to left, #ffd166, #ef476f);
+        box-shadow: 5px 5px 5px black;
+}
+
+.form-group.required .control-label:after { 
+   content:"*";
+   color:black;
+}
+
+.details {
+	background-image: linear-gradient(to left, #ffd166, #ef476f);
+        box-shadow: 5px 5px 5px black;
+}
+
+.displayTable {
+	background-image: linear-gradient(to left, #ffd166, #ef476f);
+        box-shadow: 5px 5px 5px black;
+}
+
+.locationTable {
+	background-image: linear-gradient(to left, #ffd166, #ef476f);
+        box-shadow: 5px 5px 5px black;
+}
+
+.supersTable {
+	background-image: linear-gradient(to left, #ffd166, #ef476f);
+        box-shadow: 5px 5px 5px black;
+}
+
+#newsFeed {
+	background-image: linear-gradient(to right, #ffd166, #ef476f);
+        box-shadow: 5px 5px 5px black;
+}
+
+#newsFeedTable {
+	background-image: linear-gradient(to right, #ffd166, #ef476f);
+}
+
+
+#welcome {
+	background-image: linear-gradient(to left, #ffd166, #ef476f);
+        box-shadow: 5px 5px 5px black;
+        height: 33.33%;
+}
+
+
+a:link {
+	text-decoration: none;
+	color: white;
+}
+
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #ffd166;
+}
+
+a:active {
+	text-decoration: none;
+	color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#deleteModal {
+	background-image: linear-gradient(to left, pink, white);
+}
+
+.modal-body {
+	background-image: linear-gradient(to left, pink, white);
+}
+
+[class*="col-"] {
+	vertical-align: top;
+}
+
+/*
+red
+#ef476f
+
+yellow
+#ffd166
+
+green
+#06d6a0
+
+light blue
+#118ab2
+
+dark blue
+#073b4c
+
+light purple
+#663399
+
+dark purple
+#9370DB
+
+*/
+
+
+

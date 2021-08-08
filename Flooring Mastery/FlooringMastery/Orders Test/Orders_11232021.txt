@@ -1,0 +1,3 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,Ben Rickel,MN,6.785,Wood,420.00,8.00,15.00,5.00,5000.00,750.00,10000.00
+2,Becky Lindholm,MN,6.785,Wood,420.00,8.00,15.00,5.00,5000.00,750.00,10000.00

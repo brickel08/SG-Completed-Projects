@@ -1,0 +1,3 @@
+StateAbbreviation,StateName,TaxRate
+MN,Minnesota,6.875
+CA,California,7.25
